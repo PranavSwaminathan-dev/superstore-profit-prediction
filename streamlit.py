@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-model = joblib.load("superstore_best_pca_rf_model.pkl")
+model = joblib.load("superstore_rf_model.pkl")
 
 st.title("Superstore Profit Predictor")
 
