@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Superstore Profit Predictor", page_icon="💰", layout="centered")
 
-model = joblib.load("superstore_rf_model.pkl")
+model = joblib.load("superstore_blend_model.pkl")
 
 
 
