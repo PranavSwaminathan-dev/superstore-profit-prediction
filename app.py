@@ -8,10 +8,10 @@ model = joblib.load("superstore_rf_model.pkl")
 
 
 try:
-    model = load_model()
+    model()
 except FileNotFoundError:
     st.error(
-        f"Model file '{MODEL_PATH}' was not found. "
+        f"Model file '{"superstore_rf_model.pkl"}' was not found. "
         "Make sure it's included in the deployment (see Git LFS / hosting setup)."
     )
     st.stop()
