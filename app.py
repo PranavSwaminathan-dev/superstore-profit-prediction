@@ -70,7 +70,11 @@ if predict_clicked:
 
     try:
         prediction = model.predict(df_input)[0]
-        st.success(f"### Predicted Profit: ${prediction:,.2f}")
+        margin = (prediction / sales * 100) if sales > 0 else 0
+        st.success(flabel="Predicted Profit",
+            value=f"${prediction:,.2f}",
+            delta=f"{margin:.1f}% margin",
+)
         if prediction < 0:
             st.warning(
                 "This order is predicted to be a loss. Try lowering the "
