@@ -22,16 +22,16 @@ col1, col2 = st.columns(2)
 
 with col1:
     sales = st.number_input(
-        "Sales ($)", min_value=0.0, max_value=22700.0, value=100.0, step=10.0
+        "Sales", min_value=0.0, max_value=22700.0, value=100.0, step=10.0, help="Type in the number of sales made by the order"
     )
     discount = st.slider(
-        "Discount", min_value=0.0, max_value=1.0, value=0.0, step=0.01
+        "Discount", min_value=0.0, max_value=1.0, value=0.0, step=0.01, help="Select discount given for the order"
     )
-    quantity = st.slider("Quantity", min_value=1, max_value=14, value=1)
+    quantity = st.slider("Quantity", min_value=1, max_value=14, value=1, help="Select quantity of the products in the order")
 
 with col2:
     shipping_cost = st.number_input(
-        "Shipping Cost ($)", min_value=0.0, max_value=1000.0, value=10.0, step=1.0
+        "Shipping Cost ($)", min_value=0.0, max_value=1000.0, value=10.0, step=1.0, help="Type in the cost to ship the order"
     )
     sub_category = st.selectbox(
         "Sub-Category",
@@ -41,6 +41,7 @@ with col2:
             "Labels", "Machines", "Paper", "Phones", "Storage",
             "Supplies", "Tables",
         ],
+        help="Type in what product was bought in the order"
     )
 
 predict_clicked = st.button("Predict Profit", type="primary")
