@@ -41,7 +41,7 @@ with col2:
             "Labels", "Machines", "Paper", "Phones", "Storage",
             "Supplies", "Tables",
         ],
-        help="Type in what product was bought in the order"
+        help="Select what product was bought in the order"
     )
 
 predict_clicked = st.button("Predict Profit", type="primary")
