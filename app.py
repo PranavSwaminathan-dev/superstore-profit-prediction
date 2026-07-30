@@ -8,7 +8,7 @@ model = joblib.load("superstore_rf_model.pkl")
 
 
 try:
-    model()
+    model= joblib.load("superstore_rf_model.pkl")
 except FileNotFoundError:
     st.error(
         f"Model file '{"superstore_rf_model.pkl"}' was not found. "
