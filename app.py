@@ -4,12 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="Superstore Profit Predictor", page_icon="💰", layout="centered")
 
-MODEL_PATH = "superstore_best_rf_model.pkl"
-
-
-@st.cache_resource
-def load_model():
-    return joblib.load(MODEL_PATH)
+model = joblib.load("superstore_rf_model.pkl")
 
 
 try:
